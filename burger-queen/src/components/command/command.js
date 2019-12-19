@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css'
 //import Button from './components/Button/button.js'
 
 export default function Command (){

@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime&display=swap');
+
+.menu-card {
+    display: flex;
+    padding: 0.5%;
+    margin: 2%;
+    width: 30%;
+    font-family: 'Courier Prime', monospace;
+    background-color: #ff00ae4f;
+    border: groove;
+}

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime&display=swap');
+
+.nav {
+    display: flex;
+    padding: 2%;
+    font-size: x-large;
+}
+
+.salao{
+    display: flex;
+    margin: 10%;
+    font-family: 'Courier Prime', monospace;
+}
+
+.cozinha{
+    display: flex;
+    margin: 10%;
+    font-family: 'Courier Prime', monospace;
+}

@@ -14,10 +14,12 @@ export default function MenuBF (){
     },[])
      console.log(itens)
     return (
-     <ul>
-         {itens.map(item=> (
-             <li>{item.name}</li>
-         ))}
-     </ul>
+    <div>
+        <ul>
+            {itens.map(item=> (
+                <li>{item.name}</li>
+            ))}
+        </ul>]
+     </div>
     )
   }

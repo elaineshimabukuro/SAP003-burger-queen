@@ -4,12 +4,16 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import Saloon from './pages/saloon'
-import Kitchen from './pages/kitchen'
-import Nav from './components/nav.js'
+import Saloon from './pages/saloon/saloon'
+import Kitchen from './pages/kitchen/kitchen'
+import Nav from './components/Nav/nav.js'
+import Header from './components/header/header.js'
+
 
 export default function App2 (){
     return (
+      <div>
+        <Header/>
         <Router>
         <Nav/>
         <div>
@@ -19,5 +23,6 @@ export default function App2 (){
           </Switch>
         </div>
       </Router>
+      </div>
     );
   }
