@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-/utils
 
 # testing
 /coverage
@@ -17,3 +16,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+/src/utils/firebase.js
