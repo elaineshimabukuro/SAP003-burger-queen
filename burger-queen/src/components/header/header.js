@@ -4,8 +4,8 @@ import './style.css';
 
 export default function Header (){
     return (
-     <div>
-         <h1 class="header">Burger Queen</h1>
-     </div>
+     <header>
+         <h1>Burger <img src="Group 2.png"/>Queen</h1>
+     </header>
     )
   }

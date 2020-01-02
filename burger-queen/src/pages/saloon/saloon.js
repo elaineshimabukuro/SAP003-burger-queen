@@ -1,32 +1,22 @@
-import React, {useEffect, useState} from 'react';
-import firebase from '/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/utils/firebase.js';
-import MenuCard from '/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/components/MenuCard/card.js';
+import React from 'react';
 import Command from '/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/components/command/command.js'
 import './style.css'
+import MenuAllDay from '/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/components/Menu/allday.js'
+import MenuBreakFast from '/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/components/Menu/breakfast.js'
+
 
 export default function Saloon (){
-    const [itens, setItens] = useState ([]);
    
-    useEffect(()=> {
-        firebase.firestore().collection('Menu').get().then((snapshot) => {
-            snapshot.forEach((doc) => {
-                setItens((currentState) => [...currentState, doc.data()]);
-            });
-        })
-    },[])
-
     return (
-        <div class='container'>
-            <div class="itens">
-                <h1>Menu</h1>
-                {itens.map(menuItem => 
-                    <MenuCard 
-                        name={menuItem.name} 
-                            price={menuItem.price} 
-                                handleClick={()=> console.log(menuItem)}/>
-                )} 
+        <div class="container">
+            <div class="menu">
+                <h1>M e n u</h1>
+                <h2>Café da Manhã</h2>
+                <MenuBreakFast/>
+                <h2>Almoço & Jantar</h2>
+                <MenuAllDay/>
             </div> 
-            <div class="command"><Command/></div> 
+            <div class="pedido"><Command/></div> 
         </div> 
         
     )

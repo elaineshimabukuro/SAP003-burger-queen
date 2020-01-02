@@ -1,17 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
 .container{
     display:flex;
+    font-family: 'Lobster', cursive;
+    
 }
-
-.itens{
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 240%;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
     background-color: aqua;
     width: 50%;
     padding: 2%;
     margin: 2%;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
-
-.command{
+.pedido{
     background-color: blue;
     width: 50%;
     padding: 2%;
     margin: 2%;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }

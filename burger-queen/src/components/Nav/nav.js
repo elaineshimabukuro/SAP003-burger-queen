@@ -5,12 +5,13 @@ import './style.css';
 export default function Nav(){
     return (
         <nav class="nav">
-            <ul>
+            <ul class="menu-list">
                 <li class="salao">
-                <Link to="/saloon">Salão</Link>
+                    <Link to="/saloon">Salão</Link>
                 </li>
+                
                 <li class="cozinha">
-                <Link to="/kitchen">Cozinha</Link>
+                      <Link to="/kitchen">Cozinha</Link>
                 </li>
             </ul>
         </nav>

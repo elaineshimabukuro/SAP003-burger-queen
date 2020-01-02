@@ -4,8 +4,14 @@ import './style.css'
 
 export default function Command (){
     return (
-     <div class="command">
-         <h1>Comanda</h1>
+     <div>
+         <form class="command">
+             <label for="client">Cliente</label>
+                <input class="client" type= "text" placeholder="Cliente"></input>
+                    <label for="table">Mesa</label>
+                        <input class="table" type= "text" placeholder="Mesa"></input>
+         </form>
+        
      </div>
     )
   }

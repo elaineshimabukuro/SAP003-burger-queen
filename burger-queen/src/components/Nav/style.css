@@ -2,12 +2,20 @@
 
 .nav {
     display: flex;
+    flex-direction: row;
     padding: 2%;
-    font-size: x-large;
+    font-size: 120%;
+}
+.menu-list{
+    display: flex;
+}
+.menu-list:hover{
+    color: blue;
 }
 
 .salao{
     display: flex;
+    flex-direction: column;
     margin: 10%;
     font-family: 'Courier Prime', monospace;
 }
