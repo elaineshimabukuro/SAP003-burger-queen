@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import firebase from '/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/utils/firebase.js';
-import MenuCard from '/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/components/MenuCard/card.js'
+import Card from '/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/components/Card/card.js'
 
 
 export default function Menu(props) {
@@ -20,7 +20,7 @@ export default function Menu(props) {
             <div> 
                 <h2>Café da Manhã</h2>
                     {menu.map((item)=> item.breakfast ===true ?
-                     <MenuCard 
+                     <Card 
                         name={item.name} 
                         handleClick={()=> props.handleClick(item)}/> : false)}
                         
@@ -28,7 +28,7 @@ export default function Menu(props) {
                  <div>
                     <h2>Almoço & Jantar</h2>
                         {menu.map((item)=> item.breakfast !==true ?
-                          <MenuCard 
+                          <Card 
                              name={item.name} 
                              handleClick={()=> props.handleClick(item)}/> : false)}
                 </div>

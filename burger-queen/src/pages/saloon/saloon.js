@@ -26,16 +26,31 @@ export default function Saloon() {
             setItens([...itens])
         }
     }
+    const deleteItens = (product) => {
+        const index = (itens.indexOf(product))
+        itens.splice(index, 1)
+        setItens([...itens])
+    }
+
+    const total = itens.reduce((acumulador, item) => {
+            return acumulador + (item.price * item.qtd);
+        }, 0)
+
 
     return (
         <div class="container">
             <div class="menu">
                 <h1>M e n u</h1>
-                <Menu handleClick={addItens} />
+                    <Menu
+                        handleClick={addItens} />
             </div>
-            <div class="pedido">
-                <Command itens={itens} subItem={subItem} />
-            </div>
+                <div class="pedido">
+                    <Command
+                        itens={itens}
+                        subItem={subItem}
+                        deleteItens={deleteItens} 
+                        total = {total}/>
+                </div>
         </div>
 
     )
