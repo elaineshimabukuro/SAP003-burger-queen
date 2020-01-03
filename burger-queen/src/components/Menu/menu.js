@@ -1,19 +1,40 @@
-import React, {useState,useEffect}  from 'react';
+import React, { useState, useEffect } from 'react';
 import firebase from '/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/utils/firebase.js';
+import MenuCard from '/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/components/MenuCard/card.js'
 
 
-export default function Menu(){
-    const [itens, setItens] = useState ([]);
-   
-    useEffect(()=> {
+export default function Menu(props) {
+    const [menu, setMenu] = useState([]);
+
+    useEffect(() => {
         firebase.firestore().collection('Menu').get().then((snapshot) => {
             snapshot.forEach((doc) => {
-                setItens((currentState) => [...currentState, doc.data()]);
+                setMenu((currentState) => [...currentState, doc.data()]);
             });
         })
-    },[])
+    }, [])
+
 
     return (
-        itens
-    )
-  };
+        <div>
+            <div> 
+                <h2>Café da Manhã</h2>
+                    {menu.map((item)=> item.breakfast ===true ?
+                     <MenuCard 
+                        name={item.name} 
+                        handleClick={()=> props.handleClick(item)}/> : false)}
+                        
+            </div>
+                 <div>
+                    <h2>Almoço & Jantar</h2>
+                        {menu.map((item)=> item.breakfast !==true ?
+                          <MenuCard 
+                             name={item.name} 
+                             handleClick={()=> props.handleClick(item)}/> : false)}
+                </div>
+        </div>
+      
+     ) 
+};
+
+//handleClick={()=> addItens(item.name)}/> : false)}
