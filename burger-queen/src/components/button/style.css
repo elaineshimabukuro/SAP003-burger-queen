@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime&display=swap');
+
+
+.button{
+    display: inline-flex;
+    border: outset;
+    margin: 4%;
+    padding: 2%;
+    font-family: 'Courier Prime', monospace;
+    font-size: medium;
+}

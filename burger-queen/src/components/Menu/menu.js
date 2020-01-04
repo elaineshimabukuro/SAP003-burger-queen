@@ -37,4 +37,3 @@ export default function Menu(props) {
      ) 
 };
 
-//handleClick={()=> addItens(item.name)}/> : false)}

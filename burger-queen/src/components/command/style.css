@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime&display=swap');
+
 .command-header{
     display: flex;
     flex-flow: row;
@@ -10,27 +12,13 @@ label{
     align-items: center;
     padding: 3%;
     margin: 1%;
+    font-size: x-large;
 }
 
-.client{
-    display: flex;
-    width: 50%;
-    border-radius: 10%;
-    padding: 2%;
-    margin: 2%;
-}
-
-.table{
-    display: flex;
-    width: 50%;
-    border-radius: 10%;
-    padding: 2%;
-    margin: 2%;
-
-}
 
 .command{
     display: flex;
-    
+    font-family: 'Courier Prime', monospace;
+    padding: 2%;
     
 }

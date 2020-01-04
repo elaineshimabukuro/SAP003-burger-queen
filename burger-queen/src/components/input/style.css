@@ -1,0 +1,8 @@
+.input{
+    display: flex;
+    border-bottom-color: black;
+    text-align: center;
+    padding: 2%;
+    margin: 2%;
+    width: 100%
+}
