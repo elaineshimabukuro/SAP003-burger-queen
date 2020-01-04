@@ -8,6 +8,9 @@ export default function Card(props){
             <p>{props.qtd}</p>
             <p>{props.name}</p>
             <p>{props.price}</p>
+            <p>{props.table}</p>
+            <p>{props.timestamp}</p>
+            <p>{props.client}</p>
         </section>
     )
 }

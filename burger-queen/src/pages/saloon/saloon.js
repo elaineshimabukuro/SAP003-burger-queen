@@ -14,6 +14,20 @@ export default function Saloon() {
     
     const sendCommand = (e) =>{
         e.preventDefault()
+
+        if (!client){
+            alert('Campo do cliente vazio. Insira o nome do cliente.')
+            return;
+        }
+        if (!table){
+            alert('Campo da mesa vazio. Insira o número da mesa.')
+            return;
+        }
+        if (itens.length === 0){
+            alert('Campo da comanda vazio. Insira ao menos 1 item para enviar o pedido.')
+            return;
+        }
+        
         firebase
         .firestore()
         .collection ('command')
