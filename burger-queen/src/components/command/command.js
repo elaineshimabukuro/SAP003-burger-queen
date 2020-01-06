@@ -1,9 +1,8 @@
 import React from 'react';
 import './style.css'
 //import Card from '/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/components/Card/card.js'
-import Button from "/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/components/button/button.js";
-//import firebase from '/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/utils/firebase.js';
-import Input from '/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/components/input/input.js'
+import Button from "../button/button.js";
+import Input from '../input/input.js'
 
 export default function Command(props) {
 

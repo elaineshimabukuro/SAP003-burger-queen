@@ -1,12 +1,12 @@
 import React from 'react';
 import './style.css';
-import './logo.png';
+import img from './logo.png';
 
 
 export default function Header (){
     return (
      <header>
-         <h1>Burger <img src="logo.png"/>Queen</h1>
+         <h1>Burger <img class="logo" src={img}/>Queen</h1>
      </header>
     )
   }

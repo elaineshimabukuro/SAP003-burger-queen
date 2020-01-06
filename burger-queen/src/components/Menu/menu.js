@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import firebase from '/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/utils/firebase.js';
-import Card from '/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/components/Card/card.js'
+import firebase from '../../utils/firebase.js';
+import Card from '../Card/card.js'
 
 
 export default function Menu(props) {

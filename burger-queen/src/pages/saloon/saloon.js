@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Command from '/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/components/command/command.js'
+import Command from '../../components/command/command.js'
 import './style.css'
-import Menu from '/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/components/Menu/menu.js'
-import firebase from '/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/utils/firebase.js';
+import Menu from '../../components/Menu/menu.js'
+import firebase from '../../utils/firebase.js';
 
 
 export default function Saloon() {
