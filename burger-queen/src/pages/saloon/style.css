@@ -2,8 +2,7 @@
 
 .container{
     display:flex;
-    font-family: 'Lobster', cursive;
-    
+    font-family: 'Lobster', cursive;    
     
 }
 h1{
@@ -27,3 +26,11 @@ h1{
     margin: 2%;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
+
+.init{
+    display: flex;
+    margin-left: auto;
+    width: 20%;
+    height: 50%;
+}
+
