@@ -59,9 +59,9 @@ export default function Saloon() {
     }
 
     const subItem = (product) => {
-        const findIndex = itens.findIndex(item => item.name === product.name)
-        if (itens[findIndex].qtd > 1) {
-            itens[findIndex].qtd--
+        const findItem = itens.find(item => item.name === product.name)
+        if (findItem.qtd > 1) {
+            findItem.qtd--
             setItens([...itens])
         }
     }

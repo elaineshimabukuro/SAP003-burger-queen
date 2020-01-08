@@ -3,6 +3,7 @@ import firebase from '../../utils/firebase.js';
 //import Card from '../../components/Card/card.js'
 import Button from '../../components/button/button'
 import './style.css'
+//import OrderCard from '../../components/orderCard/orderCard'
 
 
 export default function Kitchen(props) {
@@ -36,33 +37,42 @@ export default function Kitchen(props) {
     if (orderItem) {
       orderItem.status = 'done'
     }
+    setOrder([...order])
+
+    firebase
+    .firestore()
+    .collection('orderDone')
+    .add({
+      item,
+      timestamp :new Date().toLocaleString('pt-BR'),
+    })
 
     setOrder([...order])
   }
 
   return (
-    <div>
-      <div class="orders">
+    <div class='container-kitchen'>
+      <div class='orders'>
 
         <h1>Pedidos</h1>
         {order.filter(i => i.status === 'waiting').map((item) => (
-          <section class='menu-card'>
-            <div class="itens">
-              <strong>Itens:</strong>{item.itens.map(function (i) { return <p>{i.qtd} {i.name} </p> })}
-            </div>
-            <div class="identification">
-              <strong>Cliente:</strong> {item.client} <strong>Mesa: </strong>{item.table}
-            </div>
-            <div>
-              <strong>Hora:</strong> {item.timestamp}
-            </div>
-            <Button
-              class="init"
-              title='Iniciar preparo'
-              handleClick={() => initOrder(item)}
+           <section class='menu-card'>
+              <div class="itens">
+                <strong>Itens:</strong>{item.itens.map(function (i) { return <p>{i.qtd} {i.name} </p> })}
+              </div>
+              <div class="identification">
+                <strong>Cliente:</strong> {item.client} <strong>Mesa: </strong>{item.table}
+              </div>
+              <div>
+                <strong>Hora:</strong> {item.timestamp}
+              </div>
+              <Button
+                class="init"
+                title='Pedido Feito'
+                handleClick={() => initOrder(item)}
 
-            />
-          </section>
+              />
+            </section>
         ))}
 
 
@@ -83,7 +93,7 @@ export default function Kitchen(props) {
             </div>
             <Button
               class="init"
-              title='Iniciar preparo'
+              title='Pedido Feito'
               handleClick={() => finishOrder(item)}
 
             />
@@ -91,63 +101,18 @@ export default function Kitchen(props) {
         ))}
 
       </div>
-      <div class="orders-done">
-        <h1>Pedidos Prontos</h1>
-        {order.filter(i => i.status === 'done').map((item) => (
-          <section class='menu-card'>
-            <div class="itens">
-              <strong>Itens:</strong>{item.itens.map(function (i) { return <p>{i.qtd} {i.name} </p> })}
-            </div>
-            <div class="identification">
-              <strong>Cliente:</strong> {item.client} <strong>Mesa: </strong>{item.table}
-            </div>
-            <div>
-              <strong>Hora:</strong> {item.timestamp}
-            </div>
-            <Button
-              class="init"
-              title='Iniciar preparo'
-        
-
-            />
-          </section>
-        ))}
-
-      </div>
+      
     </div>
   )
 }
 
 
-  // const initOrder = (orders) => {
-  //   const index = (order.indexOf(orders))
-  //   order.forEach((pedido)=>{
-  //     if(order.table === pedido.table){
-  //       return (
-  //         <div class="orders-doing">
-  //           <h1>Fazendo ...</h1>
-  //           {order.map((item)=> (
-  //             <section class='menu-card'>
-  //               <div class="itens">
-  //                 <strong>Itens:</strong>{item.itens.map(function(i) { return  <p>{i.qtd} {i.name} </p> })}
-  //               </div>
-  //                 <div class="identification">
-  //                   <strong>Cliente:</strong> {item.client} <strong>Mesa: </strong>{item.table}
-  //                 </div> 
-  //                   <div>
-  //                     <strong>Hora:</strong> {item.timestamp}
-  //                   </div>
-  //              </section>
-  //             ))} 
-  //         </div>
+  
 
 
-  //       )
-  //     }
-  //   })
-  // }
   // <Card 
   //           client={item.client}
   //           table={item.table}
   //           name={item.itens.map(function(i) { return  <p>{i.name} {i.qtd}</p> })}
   //           timestamp={item.timestamp}  />
+
