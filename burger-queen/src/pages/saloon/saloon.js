@@ -35,7 +35,11 @@ export default function Saloon() {
             client,
             table,
             itens: itens.map(function(i) { return { name: i.name, qtd: i.qtd } }),
-            timestamp: new Date().toLocaleString('pt-BR'),
+            timestamp: new Date().toLocaleString('pt-BR', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+              }),
             total: total,
             status: 'waiting',
         })

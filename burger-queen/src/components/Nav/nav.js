@@ -13,6 +13,10 @@ export default function Nav(){
                 <li class="cozinha">
                       <Link to="/kitchen">Cozinha</Link>
                 </li>
+
+                <li class="entrega">
+                      <Link to="/delivery">Entrega</Link>
+                </li>
             </ul>
         </nav>
     )

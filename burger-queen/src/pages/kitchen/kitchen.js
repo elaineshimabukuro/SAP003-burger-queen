@@ -26,9 +26,8 @@ export default function Kitchen(props) {
   const initOrder = (item) => {
     const orderItem = order.find(i => i === item)
     if (orderItem) {
-      orderItem.status = 'doing'
+     orderItem.status ='doing'
     }
-
     setOrder([...order])
   }
 
@@ -44,10 +43,14 @@ export default function Kitchen(props) {
     .collection('orderDone')
     .add({
       item,
-      timestamp :new Date().toLocaleString('pt-BR'),
-    })
-
-    setOrder([...order])
+      timestamp1 :new Date().toLocaleString('pt-BR', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      }),
+    }).then(()=>
+     setOrder([...order])
+     )
   }
 
   return (
@@ -68,7 +71,7 @@ export default function Kitchen(props) {
               </div>
               <Button
                 class="init"
-                title='Pedido Feito'
+                title='Iniciar Preparo'
                 handleClick={() => initOrder(item)}
 
               />
@@ -108,7 +111,13 @@ export default function Kitchen(props) {
 
 
   
-
+//update de status no firebase
+// firebase
+// .firestore()
+// .collection('command')
+// .update({
+//   status: 'doing'
+// })
 
   // <Card 
   //           client={item.client}

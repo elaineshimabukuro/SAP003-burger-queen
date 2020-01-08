@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Saloon from './pages/saloon/saloon'
 import Kitchen from './pages/kitchen/kitchen'
+import Delivery from './pages/delivery/delivery'
 import Nav from './components/Nav/nav.js'
 import Header from './components/header/header.js'
 
@@ -20,6 +21,7 @@ export default function App2 (){
           <Switch>
             <Route path="/saloon" component={Saloon}/>
             <Route path="/kitchen" component={Kitchen}/>
+            <Route path="/delivery" component={Delivery}/>
           </Switch>
         </div>
       </Router>
