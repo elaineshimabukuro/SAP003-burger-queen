@@ -2,9 +2,9 @@ import React from 'react';
 import './style.css';
 
 
-export default function Card(props){
+export default function MenuCard(props){
     return(
-        <section class="card" onClick={props.handleClick}>
+        <section class="menu-card" onClick={props.handleClick}>
             <p><h3>{props.client}</h3></p>
             <p>{props.qtd}</p>
             <p>{props.name}</p>

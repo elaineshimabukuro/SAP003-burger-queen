@@ -18,7 +18,7 @@ export default function Kitchen(props) {
   useEffect(() => {
     firebase.firestore().collection('command').get().then((snapshot) => {
       snapshot.forEach((doc) => {
-        setOrder((currentState) => [...currentState, doc.data()]);
+        setOrder((currentState,) => [...currentState, doc.data(),doc.id]);
       });
     })
   }, [])
@@ -26,9 +26,19 @@ export default function Kitchen(props) {
   const initOrder = (item) => {
     const orderItem = order.find(i => i === item)
     if (orderItem) {
-     orderItem.status ='doing'
+  
+      firebase
+      .firestore()
+      .collection('command')
+      .doc(item.id)
+      .update({
+        status: 'doing'
+        }),
+      
+      setOrder([...order])
     }
-    setOrder([...order])
+    
+     
   }
 
   const finishOrder = (item) => {
@@ -59,7 +69,7 @@ export default function Kitchen(props) {
 
         <h1>Pedidos</h1>
         {order.filter(i => i.status === 'waiting').map((item) => (
-           <section class='menu-card'>
+           <section class='card'>
               <div class="itens">
                 <strong>Itens:</strong>{item.itens.map(function (i) { return <p>{i.qtd} {i.name} </p> })}
               </div>
@@ -84,7 +94,7 @@ export default function Kitchen(props) {
       <div class="orders-doing">
         <h1>Fazendo ...</h1>
         {order.filter(i => i.status === 'doing').map((item) => (
-          <section class='menu-card'>
+          <section class='card'>
             <div class="itens">
               <strong>Itens:</strong>{item.itens.map(function (i) { return <p>{i.qtd} {i.name} </p> })}
             </div>

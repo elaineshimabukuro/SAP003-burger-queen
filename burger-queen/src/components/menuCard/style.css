@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Courier+Prime&display=swap');
 
-.card {
+.menu-card {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     padding: 0.5%;
     margin: 2%;

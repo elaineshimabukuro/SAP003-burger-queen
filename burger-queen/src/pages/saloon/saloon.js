@@ -5,7 +5,7 @@ import Menu from '../../components/Menu/menu.js'
 import firebase from '../../utils/firebase.js';
 
 
-export default function Saloon() {
+export default function Saloon(props) {
     
     
     const [itens, setItens]=useState([])
