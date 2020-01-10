@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css'
-//import Card from '/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/components/Card/card.js'
+import MenuCard from '../menuCard/menuCard'
 import Button from "../button/button.js";
 import Input from '../input/input.js'
 
