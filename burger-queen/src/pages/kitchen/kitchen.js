@@ -17,28 +17,37 @@ export default function Kitchen(props) {
 
   useEffect(() => {
     firebase.firestore().collection('command').get().then((snapshot) => {
-      snapshot.forEach((doc) => {
-        setOrder((currentState,) => [...currentState, doc.data(),doc.id]);
+      const documento = snapshot.docs.map((doc) =>{ return ({...doc.data(),
+        id: doc.id})
+      })
+      setOrder(documento)
+      console.log(documento)
       });
-    })
+    
   }, [])
 
   const initOrder = (item) => {
     const orderItem = order.find(i => i === item)
     if (orderItem) {
+      orderItem.status = 'doing'
+    }
+    setOrder([...order])
   
       firebase
       .firestore()
       .collection('command')
       .doc(item.id)
       .update({
-        status: 'doing'
-        }),
+        status: 'doing',
+        timestamp: new Date().toLocaleString('pt-BR', {
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit'
+        }),    
+      }),
       
       setOrder([...order])
-    }
     
-     
   }
 
   const finishOrder = (item) => {
@@ -50,17 +59,19 @@ export default function Kitchen(props) {
 
     firebase
     .firestore()
-    .collection('orderDone')
-    .add({
-      item,
-      timestamp1 :new Date().toLocaleString('pt-BR', {
+    .collection('command')
+    .doc(item.id)
+    .update({
+      status: 'done',
+      timestamp: new Date().toLocaleString('pt-BR', {
         hour: '2-digit',
         minute: '2-digit',
         second: '2-digit'
       }),
-    }).then(()=>
+      })
+    
      setOrder([...order])
-     )
+     
   }
 
   return (
@@ -121,13 +132,7 @@ export default function Kitchen(props) {
 
 
   
-//update de status no firebase
-// firebase
-// .firestore()
-// .collection('command')
-// .update({
-//   status: 'doing'
-// })
+
 
   // <Card 
   //           client={item.client}

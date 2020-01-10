@@ -11,7 +11,7 @@ export default function Delivery (props) {
     })
   
     useEffect(() => {
-      firebase.firestore().collection('orderDone').get().then((snapshot) => {
+      firebase.firestore().collection('command').get().then((snapshot) => {
         snapshot.forEach((doc) => {
             setOrderDone((currentState) => [...currentState, doc.data()]);
         });
@@ -29,7 +29,7 @@ export default function Delivery (props) {
                     <div class="identification">
                         <strong>Cliente:</strong> {item.client} <strong>Mesa: </strong>{item.table}
                     </div>
-                    <div>
+                    <div class="total">
                         <strong>Total:</strong> {item.total}
                     </div>
                 
