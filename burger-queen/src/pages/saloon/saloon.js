@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Command from '../../components/command/command.js'
 import './style.css'
 import Menu from '../../components/Menu/menu.js'
+import Extras from '../../components/extras/extras'
 import firebase from '../../utils/firebase.js';
 
 
@@ -11,7 +12,8 @@ export default function Saloon() {
     const [table, setTable]= useState('')
     const [client, setClient]= useState('')
     const [modal, setModal]= useState({status:false})
-
+    const [options, setOptions]= useState('')
+    const [types, setTypes]= useState('')
 
     const addItens = (newItem) => {
         const findItem = itens.find(item => item.name === newItem.name)
@@ -40,7 +42,8 @@ export default function Saloon() {
         setItens([...itens])
     }
 
-    const total = itens.reduce((acumulador, item) => {
+
+    const total = itens.reduce((acumulador, item) => {  
             return acumulador + (item.price * item.qtd);
         }, 0)
     
@@ -52,7 +55,15 @@ export default function Saloon() {
             addItens(menuItem);
         }
     }
-  
+    
+    const addExtrasTypes = () => {
+        const updatedItem = {...modal.item, name: `${modal.item.name} com carne do tipo ${types}  Adicional: ${options} `};
+        const priceExtra = modal.item.adicional.map(elem => elem.price)
+        const updatedPrice = {...modal.item, price: `${modal.item.price + priceExtra}`};
+        addItens(updatedItem,updatedPrice);
+        setModal({status:false})
+    }
+
     const sendCommand = (e) =>{
         e.preventDefault()
 
@@ -94,21 +105,16 @@ export default function Saloon() {
                     <Menu
                         handleClick={verifyOptions} />
             </div>
-                {modal.status ? (
-                    <div>
-                        <h3>Adicionais</h3>
-                        {modal.item.adicional.map((elem, index) => (
-                            <div key={index}>
-                            <input type='radio' name='adicionais' value={elem.name}/>
-                            <label>{elem.name}</label>
-                            </div>
-                        ))}
-                        <h3>Tipos de Carne</h3>
-                    </div>
-
-                ): false}
-
                 <div class="pedido">
+                {modal.status ? (
+                 <Extras
+                    setOptions={setOptions}
+                    setTypes={setTypes}
+                    setModal={setModal}
+                    modal={modal}
+                    addExtrasTypes={addExtrasTypes}
+                 />
+                ): false}
                     <Command
                         itens={itens}   
                         setClient={setClient}
@@ -122,6 +128,4 @@ export default function Saloon() {
 
     )
 }
-
-
 

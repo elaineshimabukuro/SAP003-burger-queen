@@ -18,6 +18,8 @@ export default function Command(props) {
                 <label for="table">Mesa</label>
                 <Input
                     type={'number'}
+                    pattern={"\d+"}
+                    min={0}
                     placeholder={'Mesa'}
                     focusOut={e => props.setTable(e.currentTarget.value)}
                 />

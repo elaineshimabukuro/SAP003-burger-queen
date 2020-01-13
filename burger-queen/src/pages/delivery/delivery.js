@@ -1,5 +1,6 @@
 import React, {useEffect,useState} from 'react'
 import firebase from '../../utils/firebase'
+import Button from '../../components/button/button'
 
 export default function Delivery (props) {
     const [orderDone, setOrderDone] = useState([]);
@@ -30,12 +31,35 @@ export default function Delivery (props) {
                         <strong>Cliente:</strong> {item.client} <strong>Mesa: </strong>{item.table}
                     </div>
                     <div class="total">
-                        <strong>Total:</strong> {item.total}
+                        <strong>Total:</strong> R${item.total},00
                     </div>
-                
+               
                 </section>
             ))}
          </div> 
         )
 
 }
+
+// const delivery = (item)=>{
+//     const orderItem = orderDone.find(i => i === item)
+//     if (orderItem) {
+//       orderItem.status = 'entregue'
+//     }
+//     setOrderDone([...orderDone])
+  
+//       firebase
+//       .firestore()
+//       .collection('command')
+//       .doc(item.id)
+//       .delete()  
+      
+//       setOrderDone([orderDone])
+    
+//   }
+
+// <Button
+// class="init"
+// title='Entrega feita'
+// handleClick={() => delivery(item)}
+// />
