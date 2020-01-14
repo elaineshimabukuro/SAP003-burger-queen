@@ -134,9 +134,4 @@ export default function Kitchen( ) {
   
 
 
-  // <Card 
-  //           client={item.client}
-  //           table={item.table}
-  //           name={item.itens.map(function(i) { return  <p>{i.name} {i.qtd}</p> })}
-  //           timestamp={item.timestamp}  />
 

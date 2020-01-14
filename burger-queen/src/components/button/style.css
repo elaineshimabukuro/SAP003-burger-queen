@@ -1,5 +1,4 @@
 
-@media (min-width: 481px) and (max-width: 767px){
     @import url('https://fonts.googleapis.com/css?family=Courier+Prime&display=swap');
     
     .button{
@@ -10,4 +9,3 @@
         font-family: 'Courier Prime', monospace;
         font-size: medium;
     }
-}

@@ -7,7 +7,6 @@ export default function Input(props,e){
     return(
         <input class="input" 
             min={props.min} 
-            pattern={props.pattern}
             value={props.value}
             type={props.type}
             onBlur={props.focusOut}

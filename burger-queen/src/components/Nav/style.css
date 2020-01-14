@@ -10,9 +10,6 @@
 .menu-list{
     display: flex;
 }
-.menu-list:hover{
-    color: blue;
-}
 
 .salao{
     display: flex;

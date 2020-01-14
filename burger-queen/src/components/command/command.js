@@ -18,7 +18,6 @@ export default function Command(props) {
                 <label for="table">Mesa</label>
                 <Input
                     type={'number'}
-                    pattern={"\d+"}
                     min={0}
                     placeholder={'Mesa'}
                     focusOut={e => props.setTable(e.currentTarget.value)}
@@ -53,17 +52,3 @@ export default function Command(props) {
 
 
 
-                                // <div>
-                                // <Card
-                                //     key={index}
-                                //     qtd={item.qtd}
-                                //     name={item.name}
-                                //     price= {item.price * item.qtd} />
-
-                                //     <Button
-                                //         title={"-"}
-                                //         handleClick={() => props.subItem(item)} />
-                                //     <Button
-                                //         title={"X"}
-                                //         handleClick={() => props.deleteItens(item)} /> 
-                                // </div>
