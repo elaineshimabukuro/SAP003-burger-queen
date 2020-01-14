@@ -16,7 +16,7 @@ export default function Kitchen( ) {
         id: doc.id})
       })
       setOrder(documento)
-      console.log(documento)
+      
       });
     
   }, [])
