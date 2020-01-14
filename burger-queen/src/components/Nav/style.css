@@ -11,20 +11,27 @@
     display: flex;
 }
 
-.salao{
-    display: flex;
-    flex-direction: column;
-    margin: 10%;
-    font-family: 'Courier Prime', monospace;
-}
 
-.cozinha{
-    display: flex;
-    margin: 10%;
-    font-family: 'Courier Prime', monospace;
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #fbafe3;
+	background:linear-gradient(to bottom, #f063ae 5%, #ffffff 100%);
+	background-color:#f063ae;
+	border-radius:6px;
+	border:1px solid #f04ac4;
+	display:inline-block;
+	font-family:Arial;
+	font-size: 20px;
+	font-weight:bold;
+    padding:6px 24px;
+    margin: 4%;
+	text-decoration:none;
+
 }
-.entrega{
-    display: flex;
-    margin: 10%;
-    font-family: 'Courier Prime', monospace;
+.myButton:hover {
+	background:linear-gradient(to bottom, #ffffff 5%, #f063ae 100%);
+	background-color:#ffffff;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
 }

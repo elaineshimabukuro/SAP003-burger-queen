@@ -6,17 +6,17 @@ export default function Nav(){
     return (
         <nav class="nav">
             <ul class="menu-list">
-                <li class="salao">
+                <button class="myButton">
                     <Link to="/saloon">Salão</Link>
-                </li>
+                </button>
                 
-                <li class="cozinha">
+                <button class="myButton">
                       <Link to="/kitchen">Cozinha</Link>
-                </li>
+                </button>
 
-                <li class="entrega">
+                <button class="myButton">
                       <Link to="/delivery">Entrega</Link>
-                </li>
+                </button>
             </ul>
         </nav>
     )
