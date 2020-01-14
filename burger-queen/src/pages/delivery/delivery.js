@@ -5,11 +5,6 @@ import firebase from '../../utils/firebase'
 export default function Delivery () {
     const [orderDone, setOrderDone] = useState([]);
 
-
-    useEffect(() => {
-      console.log(orderDone)
-  
-    })
   
     useEffect(() => {
       firebase.firestore().collection('command').get().then((snapshot) => {

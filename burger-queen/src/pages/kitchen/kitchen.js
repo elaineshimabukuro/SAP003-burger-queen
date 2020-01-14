@@ -11,11 +11,6 @@ export default function Kitchen( ) {
 
 
   useEffect(() => {
-    console.log(order)
-
-  })
-
-  useEffect(() => {
     firebase.firestore().collection('command').get().then((snapshot) => {
       const documento = snapshot.docs.map((doc) =>{ return ({...doc.data(),
         id: doc.id})

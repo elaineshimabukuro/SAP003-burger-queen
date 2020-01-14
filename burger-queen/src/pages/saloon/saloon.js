@@ -25,7 +25,7 @@ export default function Saloon() {
             newItem.qtd = 1;
             setItens([...itens, newItem])
         }
-        console.log(itens)
+       
     }
 
     const subItem = (product) => {
