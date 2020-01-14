@@ -6,7 +6,7 @@ import './style.css'
 //import OrderCard from '../../components/orderCard/orderCard'
 
 
-export default function Kitchen(props) {
+export default function Kitchen( ) {
   const [order, setOrder] = useState([]);
 
 

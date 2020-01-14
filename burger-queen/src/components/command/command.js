@@ -30,7 +30,7 @@ export default function Command(props) {
                         <section key={index}>
                             <div class="qtd">Qnt: {item.qtd}</div>
                             <div class="description">{item.name}</div>
-                            <div class="price">R$ {item.price * item.qtd},00</div>
+                            <div class="price">R$ {item.price * item.qtd + item.priceExtra},00</div>
                             <Button
                                 title={"-"}
                                 handleClick={() => props.subItem(item)} />

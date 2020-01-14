@@ -12,8 +12,7 @@ export default function Saloon() {
     const [table, setTable]= useState('')
     const [client, setClient]= useState('')
     const [modal, setModal]= useState({status:false})
-    const [options, setOptions]= useState('')
-    const [types, setTypes]= useState('')
+   
 
     const addItens = (newItem) => {
         const findItem = itens.find(item => item.name === newItem.name)
@@ -44,7 +43,10 @@ export default function Saloon() {
 
 
     const total = itens.reduce((acumulador, item) => {  
-            return acumulador + (item.price * item.qtd);
+        if(!item.priceExtra){
+            item.priceExtra = 0;
+        }
+            return acumulador + (item.price * item.qtd) + item.priceExtra;
         }, 0)
     
     const verifyOptions = (menuItem) => {
@@ -56,13 +58,7 @@ export default function Saloon() {
         }
     }
     
-    const addExtrasTypes = () => {
-        const updatedItem = {...modal.item, name: `${modal.item.name} com carne do tipo ${types}  Adicional: ${options} `};
-        const priceExtra = modal.item.adicional.map(elem => elem.price)
-        const updatedPrice = {...modal.item, price: `${modal.item.price + priceExtra}`};
-        addItens(updatedItem,updatedPrice);
-        setModal({status:false})
-    }
+  
 
     const sendCommand = (e) =>{
         e.preventDefault()
@@ -108,11 +104,9 @@ export default function Saloon() {
                 <div class="pedido">
                 {modal.status ? (
                  <Extras
-                    setOptions={setOptions}
-                    setTypes={setTypes}
                     setModal={setModal}
                     modal={modal}
-                    addExtrasTypes={addExtrasTypes}
+                    addItens={addItens}  
                  />
                 ): false}
                     <Command
