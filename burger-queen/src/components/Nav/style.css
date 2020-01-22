@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Courier+Prime&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 
 .nav {
     display: flex;
@@ -13,18 +13,19 @@
 
 
 .myButton {
-	box-shadow:inset 0px 1px 0px 0px #fbafe3;
-	background:linear-gradient(to bottom, #f063ae 5%, #ffffff 100%);
-	background-color:#f063ae;
-	border-radius:6px;
-	border:1px solid #f04ac4;
-	display:inline-block;
-	font-family:Arial;
-	font-size: 20px;
-	font-weight:bold;
-    padding:6px 24px;
-    margin: 4%;
-	text-decoration:none;
+	box-shadow: inset 0px 1px 0px 0px #fbafe3;
+    background: linear-gradient(to bottom, #f2b3bf 5%, #ffffff 100%);
+    background-color: #f064ae78;
+    border-radius: 6px;
+    border: 1px solid #ffffff;
+    display: inline-block;
+    
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 6px 24px;
+    margin: 6%;
+    text-decoration: none;
 
 }
 .myButton:hover {

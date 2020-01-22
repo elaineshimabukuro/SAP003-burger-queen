@@ -18,7 +18,52 @@ label{
 
 .command{
     display: flex;
+    flex-direction: row;
     font-family: 'Courier Prime', monospace;
     padding: 2%;
+    margin: 2%;
+ 
     
+}
+
+.order-command{
+    display: flex;
+    justify-content: center;
+    margin:4%;
+    padding: 4%;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: #f6a3cf;
+    border: groove;
+    font-size: large;
+    
+}
+
+.sub-item{   
+    margin: 4%;
+    border: outset;
+    font-size: 106%;
+    font-family: 'Courier Prime', monospace;
+
+}
+
+.delete-item{
+    margin: 4%;
+    border: outset;
+    font-size: 106%;
+    font-family: 'Courier Prime', monospace;
+    
+}
+
+.send-order{
+    width: 40%;
+    padding: 2%;
+    margin: 4%;
+    border: outset;
+    font-size: 130%;
+    font-family: 'Courier Prime', monospace;
+
+}
+
+.total{
+    font-size: 150%;
 }

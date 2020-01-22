@@ -11,6 +11,10 @@ header {
 
 }
 
+.name{
+  font-size: 400%;
+}
+
 .logo {
   width: 16%;
   margin-top: -4%;

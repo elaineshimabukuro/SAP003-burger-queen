@@ -6,14 +6,33 @@
     height: 50%;
 }
 .card {
+    margin: 2%;
+    padding: 2%;
+    background-color: #f2b3bfb8;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0.5%;
-    margin: 2%;
-    width: 50%;
     font-family: 'Courier Prime', monospace;
-    background-color: #ff00ae4f;
-    border: groove;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border: groove;
+    font-size: 110%;
+}
+
+.orders{
+    display: flex;
+    justify-content: center;
+}
+
+.title{
+    font-family: 'Courier Prime', monospace;
+    font-size: 250%;
+}
+
+.change-status{
+    width: 35%;
+    padding: 2%;
+    margin-left: auto;
+    margin-top: auto;
+    font-size: 118%;
+    border: outset;
 }

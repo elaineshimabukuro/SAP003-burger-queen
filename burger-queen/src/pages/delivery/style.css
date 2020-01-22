@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
+.delivery{
+    display:flex;
+    flex-direction: column;
+}
+
+.order-card {
+    margin: 2%;
+    padding: 2%;
+    background-color: #f2b3bfb8;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier Prime', monospace;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border: groove;
+    font-size: 120%;
+}
+
+.pronto{
+    font-family: 'Courier Prime', monospace;
+    font-size: 250%;
+}

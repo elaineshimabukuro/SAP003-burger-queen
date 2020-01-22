@@ -1,0 +1,26 @@
+
+.card-options{
+    display: flex;
+    font-family: 'Courier Prime', monospace;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f2b3bf4f;
+    align-items: center;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.options{
+    display: flex;
+    font-size: 50%;
+   
+}
+
+.extras{
+    width: 50%;
+    height: 50%;
+    padding: 2%;
+    margin: 4%;
+    border: outset;
+    font-size: 130%;
+    font-family: 'Courier Prime', monospace;
+}

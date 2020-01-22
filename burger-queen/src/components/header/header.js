@@ -6,7 +6,7 @@ import img from './logo.png';
 export default function Header (){
     return (
      <header>
-         <h1>Burger <img class="logo" src={img}/>Queen</h1>
+         <h1 class="name">Burger <img class="logo" src={img}/>Queen</h1>
      </header>
     )
   }

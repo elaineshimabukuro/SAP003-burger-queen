@@ -1,6 +1,5 @@
 import React from 'react';
 import './style.css'
-//import Card from '/home/laboratoria/Lab/SAP003-burger-queen/burger-queen/src/components/Card/card.js'
 import Button from "../button/button.js";
 import Input from '../input/input.js'
 
@@ -27,22 +26,28 @@ export default function Command(props) {
                 <ul>
                     {props.itens.map((item, index) =>
                         <section key={index}>
-                            <div class="qtd">Qnt: {item.qtd}</div>
-                            <div class="description">{item.name}</div>
-                            <div class="price">R$ {item.price * item.qtd + item.priceExtra},00</div>
-                            <Button
+                            <div class="order-command">
+                            <p class="qtd">Qnt: {item.qtd}</p>
+                            <p class="description">{item.name}</p>
+                            <p class="price">R$ {item.price * item.qtd + item.priceExtra},00</p>
+                            <p><Button
+                                class="sub-item"
                                 title={"-"}
                                 handleClick={() => props.subItem(item)} />
+                            
                             <Button
+                                class="delete-item"
                                 title={"X"}
-                                handleClick={() => props.deleteItens(item)} />
+                                handleClick={() => props.deleteItens(item)} /></p>
+                            </div>
                         </section>
                     )}
                 </ul>
             </div>
             <div class="command-footer">
-                <p>Valor total: R${props.total},00</p>
+                <p class="total">Valor total:  R$ {props.total},00</p>
                 <Button
+                    class="send-order"
                     title={"Enviar pedido"}
                     handleClick={props.sendCommand} />
             </div>
