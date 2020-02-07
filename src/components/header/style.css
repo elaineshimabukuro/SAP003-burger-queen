@@ -4,10 +4,12 @@
 header {
   font-family: 'Lobster', cursive;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: 180%;
-  background-color:#F2B3BF;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  font-size: 36px;
+  text-shadow: 5px 5px 1px #fbafe3;
+
 
 }
 

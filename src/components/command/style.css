@@ -38,6 +38,12 @@ label{
     
 }
 
+.itens-order{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .sub-item{   
     margin: 4%;
     border: outset;

@@ -5,7 +5,7 @@
     width: 20%;
     height: 50%;
 }
-.card {
+.card-kitchen {
     margin: 2%;
     padding: 2%;
     background-color: #f2b3bfb8;
@@ -15,12 +15,20 @@
     font-family: 'Courier Prime', monospace;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     border: groove;
-    font-size: 110%;
+    font-size: 20px;
+    align-items: initial;
+    justify-content: center;
 }
 
 .orders{
     display: flex;
     justify-content: center;
+    margin: 5%;
+}
+.orders-doing{
+    display: flex;
+    justify-content: center;
+    margin: 5%;
 }
 
 .title{

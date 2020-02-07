@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 
-.delivery{
-    display:flex;
-    flex-direction: column;
+.delivery-container{
+    display: flex;
+    justify-content: center;
 }
 
 .order-card {

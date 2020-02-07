@@ -9,11 +9,12 @@ import Kitchen from './pages/kitchen/kitchen'
 import Delivery from './pages/delivery/delivery'
 import Nav from './components/Nav/nav.js'
 import Header from './components/header/header.js'
+import './style.css'
 
 
-export default function App2 (){
+export default function App (){
     return (
-      <div>
+      <div class="main">
         <Header/>
         <Router>
         <Nav/>

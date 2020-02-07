@@ -77,8 +77,8 @@ export default function Kitchen() {
       <div class='orders'>
 
         {order.filter(i => i.status === 'waiting').map((item) => (
-          <section class='card'>
-            <div class="itens">
+          <section class='card-kitchen'>
+            <div class="itens-kitchen">
               <strong>Itens:</strong>{item.itens.map(function (i) { return <p>{i.qtd} {i.name} </p> })}
             </div>
             <div class="identification">
@@ -99,11 +99,11 @@ export default function Kitchen() {
 
 
       </div>
-      <div class="orders-doing">
-        <h1 class="title">Fazendo ...</h1>
+      <h1 class="title">Fazendo ...</h1>
+      <div class="orders-doing"> 
         {order.filter(i => i.status === 'doing').map((item) => (
-          <section class='card'>
-            <div class="itens">
+          <section class='card-kitchen'>
+            <div class="itens-kitchen">
               <strong>Itens:</strong>{item.itens.map(function (i) { return <p>{i.qtd} {i.name} </p> })}
             </div>
             <div class="identification">

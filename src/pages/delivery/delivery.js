@@ -18,6 +18,8 @@ export default function Delivery() {
     return (
         <div>
             <h1 class="pronto">Prontos para entrega</h1>
+        <div class="delivery-container">
+            
             {orderDone.filter(i => i.status === 'done').map((item) => (
                 <section class='order-card'>
                      <p class="identification">
@@ -29,6 +31,7 @@ export default function Delivery() {
                         </p>
                 </section>
             ))}
+        </div>
         </div>
     )
 

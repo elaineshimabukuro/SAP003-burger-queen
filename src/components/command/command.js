@@ -23,7 +23,7 @@ export default function Command(props) {
                 />
             </form>
             <div class="command">
-                <ul>
+                <ul class="itens-order">
                     {props.itens.map((item, index) =>
                         <section key={index}>
                             <div class="order-command">

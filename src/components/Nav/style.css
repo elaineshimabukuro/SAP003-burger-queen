@@ -2,37 +2,25 @@
 
 .nav {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     padding: 2%;
-    font-size: 120%;
  
 }
 .menu-list{
     display: flex;
+    justify-content: center;
 }
 
 
 .myButton {
-	box-shadow: inset 0px 1px 0px 0px #fbafe3;
+    box-shadow: inset 0px 1px 0px 0px #fbafe3;
     background: linear-gradient(to bottom, #f2b3bf 5%, #ffffff 100%);
     background-color: #f064ae78;
     border-radius: 6px;
-    border: 1px solid #ffffff;
     display: inline-block;
-    
-    font-family: 'Lobster', cursive;
-    font-size: 25px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 29px;
     font-weight: bold;
-    padding: 6px 24px;
+    padding: 13px 24px;
     margin: 6%;
-    text-decoration: none;
-
-}
-.myButton:hover {
-	background:linear-gradient(to bottom, #ffffff 5%, #f063ae 100%);
-	background-color:#ffffff;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
 }
