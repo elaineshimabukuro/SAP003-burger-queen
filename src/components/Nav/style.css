@@ -2,13 +2,14 @@
 
 .nav {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    flex-direction: column;
     padding: 2%;
     font-size: 120%;
- 
 }
 .menu-list{
     display: flex;
+    justify-content: center;
 }
 
 

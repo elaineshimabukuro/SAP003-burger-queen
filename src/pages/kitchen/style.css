@@ -1,4 +1,10 @@
 
+.container-kitchen{
+    display:flex;
+    flex-direction: column;
+    font-family: 'Lobster', cursive;   
+    color: white;
+}
 .init{
     display: flex;
     margin-left: auto;

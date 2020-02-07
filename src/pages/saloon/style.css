@@ -2,7 +2,7 @@
 
 .container{
     display:flex;
-    font-family: 'Lobster', cursive;    
+    font-family: 'Lobster', cursive;  
     
 }
 h1{
@@ -13,11 +13,11 @@ h1{
 .menu {
     display: flex;
     flex-direction: column;
-    background-color: #f2b3bf8a;
+    background-color: #f2b3bfe6;
     width: 50%;
     padding: 2%;
     margin: 2%;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 6px 6px 6px 3px #f6a3cf82;
 }
 .pedido{
     background-color:#f2b3bf8a;

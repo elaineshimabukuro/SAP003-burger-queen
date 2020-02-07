@@ -1,0 +1,19 @@
+
+
+body{
+   display: flex;  
+   background-image: url(img/logowhite.png);
+   margin: 0%;
+}
+
+#root{
+   width: 100%;
+ 
+}
+
+.container-principal{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+

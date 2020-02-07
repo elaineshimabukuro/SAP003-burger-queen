@@ -4,18 +4,16 @@
 header {
   font-family: 'Lobster', cursive;
   display: flex;
+  color: #ec589b;
+  -ms-flex-pack: center;
   justify-content: center;
-  font-size: 180%;
-  background-color:#F2B3BF;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-
+  font-size: 65px;
+  padding: 1%;
+  text-shadow: 4px 7px #000000;
 }
 
-.name{
-  font-size: 400%;
-}
 
 .logo {
-  width: 16%;
+  width: 20%;
   margin-top: -4%;
 }
