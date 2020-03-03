@@ -51,7 +51,7 @@ A interface mostra os dois menus (café da manhã e restante do dia), cada
 um com todos os seus _produtos_. O usuário pode escolher que _produtos_
 adicionar e a interface mostra o _resumo do pedido_ com o custo total.
 
-![Burger-Queen](\src\img\burger-queen.jpeg)
+![Burger-Queen](https://github.com/elaineshimabukuro/SAP003-burger-queen/blob/master/src/img/BQ-previa.JPG)
  
 ##  Ferramentas Utilizadas
 
